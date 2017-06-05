@@ -2,21 +2,21 @@
 
 export type BotConstants = {
 	// RegExp
-	allowRegExp: RegExp,
-	cslRegExp: RegExp,
-	destroyRegExp: RegExp,
-	disallowRegExp: RegExp,
-	getRegExp: RegExp,
-	platformRegExp: RegExp,
-	psRegExp: RegExp,
-	scrubRegExp: RegExp,
-	xbRegExp: RegExp,
+	allowRegExp: RegExp;
+	cslRegExp: RegExp;
+	destroyRegExp: RegExp;
+	disallowRegExp: RegExp;
+	getRegExp: RegExp;
+	platformRegExp: RegExp;
+	psRegExp: RegExp;
+	scrubRegExp: RegExp;
+	xbRegExp: RegExp;
 
 	// embed color
-	embedColor: string,
+	embedColor: string;
 
 	// spacer
-	spacer: string
+	spacer: string;
 };
 
 // tslint:disable-next-line:variable-name
