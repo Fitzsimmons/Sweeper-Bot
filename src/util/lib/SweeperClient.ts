@@ -2,13 +2,14 @@
 
 import { Client, ListenerUtil, LogLevel } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, Guild, GuildMember, VoiceChannel } from 'discord.js';
+import { Events } from '../listeners/Events';
 
 const config: any = require('../../config.json');
-
-const { on, once } = ListenerUtil;
+const { once } = ListenerUtil;
 
 export class SweeperClient extends Client {
 	public config: any;
+	public events: any;
 	public constructor() {
 		super({
 			name: config.name,
@@ -36,20 +37,12 @@ export class SweeperClient extends Client {
 		});
 
 		this.config = config;
+		this.events = new Events(this);
 	}
 
 	@once('pause')
 	private async _onPause(): Promise<void> {
 		await this.setDefaultSetting('prefix', '.');
 		this.emit('continue');
-	}
-
-	@on('voiceStateUpdate')
-	private async _onVoiceStateUpdate(oldMember: GuildMember, newMember: GuildMember): Promise<void> {
-		const voiceChannel: VoiceChannel = newMember.voiceChannel;
-
-		if (voiceChannel && voiceChannel.members.size >= 1) {
-			voiceChannel.clone();
-		}
 	}
 }
