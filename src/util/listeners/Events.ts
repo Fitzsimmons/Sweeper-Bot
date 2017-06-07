@@ -1,5 +1,3 @@
-'use strict';
-
 import { GuildStorage, ListenerUtil } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, Guild, GuildMember, VoiceChannel } from 'discord.js';
 import { SweeperClient } from '../lib/SweeperClient';

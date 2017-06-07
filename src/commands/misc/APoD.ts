@@ -1,5 +1,3 @@
-'use strict';
-
 import { Client, Command } from 'yamdbf';
 import { Message, RichEmbed } from 'discord.js';
 import Constants from '../../util/Constants';

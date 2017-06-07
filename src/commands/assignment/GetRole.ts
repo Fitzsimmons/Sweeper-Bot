@@ -1,5 +1,3 @@
-'use strict';
-
 import { Client, Command, GuildStorage } from 'yamdbf';
 import { GuildMember, Message, RichEmbed, Role } from 'discord.js';
 import * as fuzzy from 'fuzzy';

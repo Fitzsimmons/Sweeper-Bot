@@ -1,5 +1,3 @@
-'use strict';
-
 import { GuildMember, Message, Role } from 'discord.js';
 
 export default class Assignment {

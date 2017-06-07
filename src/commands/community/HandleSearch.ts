@@ -1,5 +1,3 @@
-'use strict';
-
 import { Client, Command, GuildStorage } from 'yamdbf';
 import { GuildMember, Message, RichEmbed, User } from 'discord.js';
 import Handle from '../../util/Handle';
