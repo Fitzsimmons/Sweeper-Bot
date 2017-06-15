@@ -1,5 +1,3 @@
-'use strict';
-
 import { Client, ListenerUtil, LogLevel } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, Guild, GuildMember, VoiceChannel } from 'discord.js';
 import { Events } from '../listeners/Events';
@@ -8,8 +6,11 @@ const config: any = require('../../config.json');
 const { once } = ListenerUtil;
 
 export class SweeperClient extends Client {
+	// properties
 	public config: any;
 	public events: any;
+
+	// constructor
 	public constructor() {
 		super({
 			name: config.name,

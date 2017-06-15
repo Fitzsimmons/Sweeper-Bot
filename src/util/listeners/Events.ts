@@ -15,6 +15,6 @@ export class Events {
 
 	@on('voiceStateUpdate')
 	private async _onVoiceStateUpdate(oldMember: GuildMember, newMember: GuildMember): Promise<void> {
-		console.log('test');
+
 	}
 }

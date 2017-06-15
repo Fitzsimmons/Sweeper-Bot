@@ -8,3 +8,4 @@ storage/
 config.json
 config.dev.json
 config.prod.json
+package-lock.json
